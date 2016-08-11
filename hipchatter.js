@@ -200,7 +200,7 @@ Hipchatter.prototype = {
     },
     // Send a message to a room
     send_message: function(room, options, callback){
-        this.request('post', 'room/'+room+'/message', options, callback);
+        this.request('post', 'room/'+room+'/message', options.message, callback);
     },
     create_webhook: function(room, options, callback){
         if (typeof options != 'object' && typeof options == 'function') {
